@@ -1,3 +1,59 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[12pt]{article}
+\usepackage[pdftex]{hyperref}
 \begin{document}
+
+\section {Introduction}
+\begin{itemize}
+\item \textbf{Training Set} : is used to tune the \textbf{parameters} of an adaptive model
+	\begin{description}
+		\item What about adaptive model??
+		\item How to design or select an good adaptive model??
+	\end{description}
+\item \textbf{Learning phase} : The precise form of the function(adaptive model) is determined during the \emph{training phase}
+
+\item \textbf{General Workflow}
+	\begin{enumerate}
+		\item Preprocess:
+			\begin{itemize}
+				\item \textbf{Normalization} : For example : transforming different size of pics to the same one.
+				\item \textbf{Reduction} : Reduce dimension or quantity, to speed up comuputation. How to reduce dimension/quantity while preserving the information in those data is not easy.
+			\end{itemize}
+		\item Training
+		\item Test : We can't train our model on all data that we have. We have to separate some of them to verify our model.
+		\item Output result
+	\end{enumerate}
+\end{itemize}
+
+\textbf{Classification:}
+\begin{itemize}
+	\item \textbf{supervised learning} : Training data comprise examples of the input vectors \underline{along with} their corresponding target vectors
+		\begin{itemize}
+			\item \textbf{classification}:decrete
+			\item \textbf{regression}:continuous
+		\end{itemize}
+	\item \textbf{unsupervised learning} : Training data consists a set of input vector \textbf{x} \underline{without} any corresponding target value
+		\begin{itemize}
+			\item \textbf{cluster} : to discover group of similar examples
+			\item \textbf{density estimation} : to determine the distribution of data within the input space.
+			\item \textbf{visualization} : to project the data from a high-dimensional space down to two/three dimensions for the purpose of \emph{visualization}. Data visualization is a hot field now. Is this can be used to preprocess data set,as mention in \emph{Reduction}?
+		\end{itemize}
+	\item \textbf{reinforcement learning}: finding suitable actions to take in a given situation in order to maximize a reward.\\
+		Make a balance of exploration and exploitation
+		\begin{itemize}
+			\item \textbf{exploration} : explore the unknow space.
+			\item \textbf{exploitation} : make use of the actions that are known to yield a high reward.
+		\end{itemize}
+		Do you remember PSO ???
+		\begin{equation}
+		V(t+1) = w*V(t) + C_{1}*R_{1}*(P(t) - X(t)) + C_{2}*R_{2}*(G(t) - X(t))
+		\end{equation}
+		\begin{equation}
+		X(t+1) = X(t) + V(t+1)
+		\end{equation}
+		It also need a balance between exploitation and exploration.But it has a global attraction when particle explore the unknown space. It is lucky...HA!
+	\item \textbf{deep learning} : a new branch of machine learning. \href{http://en.wikipedia.org/wiki/Deep\_learning}{wikipedia}	
+\end{itemize}
+
+
 \end{document}
+

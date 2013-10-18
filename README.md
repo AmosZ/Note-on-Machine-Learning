@@ -6,3 +6,6 @@ Start with Latex :
 Markdown : 
 * Introduce to Markdown : http://markdown.tw/
 * Free Markdown online editor: http://benweet.github.io/stackedit/
+
+
+I think we should adhere to a code style...

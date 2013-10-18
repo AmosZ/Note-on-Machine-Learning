@@ -8,4 +8,4 @@ Mathematical_Notation:Mathematical_Notation.tex
 	pdflatex Mathematical_Notation.tex
 
 clean:
-	rm -f *.aux *.log *.pdf *.dvi
+	rm -f *.aux *.log *.pdf *.dvi *.out
