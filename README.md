@@ -2,3 +2,6 @@
 * Markdown : 
 	Introduce to Markdown : http://markdown.tw/
 	Free Markdown online editor: http://benweet.github.io/stackedit/
+
+
+Damn it ,syntax of Latex is so complex..... I must commit my note by this weekend!
