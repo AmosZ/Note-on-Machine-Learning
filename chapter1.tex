@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
+\usepackage{amsmath}
 \usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
 \begin{document}
 
 \section {Introduction}
@@ -55,7 +57,7 @@
 \end{itemize}
 
 \section {Mathematica}
-\textbf{Covariance}
+\paragraph{Covariance}
 \begin{equation}
 cov(X,Y) = E((X-\mu)(Y-\nu))
 \end{equation}
@@ -70,11 +72,8 @@ Covariance provides a measure of the strength of the correlation between two or 
 \end{enumerate}
 
 \begin{quote}
-The variance of a random variable X is its second central moment, the expected value of the squared deviation from the mea 
+The variance of a random variable X is its second central moment, the expected value of the squared deviation from the mean 
 \end{quote}
-	\begin{equation}
-	\mu = E[(X-\mu)^2]
-	\end{equation}
 \begin{equation}
 	\sigma^2(X) = E[(X-\mu)(X-\mu)]
 \end{equation}
@@ -82,6 +81,25 @@ The variance can also be thought of as the covariance of a random variable with 
 \begin{equation}
 	cov(X,Y) = E((X-\mu)(Y-\mu))
 \end{equation}
+
+\paragraph{Normal Distribution}
+A normal distribution in a variate X with mean $\mu$ and variance $\sigma^2$ is a statistic distribution with probability density function
+\begin{figure}[ht!]
+\centering
+\includegraphics{./img/NormalDistribution.png}
+\caption{Normal Distribution}
+\end{figure}
+
+\begin{equation}
+	P(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)}
+\end{equation}
+Why \textbf{Normal Distribution} is useful?According to \href{http://mathworld.wolfram.com/CentralLimitTheorem.html}{Central Limit Theorm}, the \textbf{mean} of any set of variates with any distribution having a finite mean and variance tends to the normal distribution. 
+
+\begin{equation}
+X_{norm}\equiv\frac{\sum_{i=1}^Nx_{i}-\sum_{i=1}^N\mu_{i}}{\sqrt{\sum_{i=1}^N}\sigma^2}
+\end{equation}
+
+Then ???Why this is useful? What $X_{norm}$ means? What is the \textbf{normal form}?
 
 \end{document}
 
