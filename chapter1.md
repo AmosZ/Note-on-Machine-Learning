@@ -76,6 +76,6 @@ Pros. & Cons. of Bayes (p23.)
 
 - 1) **The selection of the prior distribution.** 
 Bayesian methods based on poor choices of prior can give poor results with high confidence.
-- 
+
 <script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
 
