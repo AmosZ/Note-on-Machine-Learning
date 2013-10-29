@@ -38,7 +38,7 @@ Chapter 1
 
 Do you remember PSO ???
 $$
-V(t+1) = w*V(t) + C_{1}*R_{1}*(P(t) - X(t)) + C_{2}*R_{2}*(G(t) - X(t))
+V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
 $$
 $$
 X(t+1) = X(t) + V(t+1)
@@ -49,11 +49,20 @@ It also need a balance between **exploitation** and **exploration**. But it has 
 **Deep Learning** : a new branch of machine learning. [wikipedia][deep_learning]
 
 
-2.Bayes’ theorem
+2.Bayes' theorem
 --------------------------------
+$$
+p\(w|D\) = \frac{p\(D|w\)p\(w\)}{p\(D\)}
+$$
+In that example,Bayes’ theorem was used to *convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.* 
+**We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.**
 
+- We capture our assumptions about w, before observing the data, in the form of a prior probability distribution p(w). 
+- The **effect** of the observed data D = {t1 , . . . , tN } is expressed through the **conditional probability p(D|w)**, and we shall see later how this can be represented explicitly.
 
+In the Bayesian \(or epistemological\) interpretation, probability measures *a degree of belief*.
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 
 <script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+
