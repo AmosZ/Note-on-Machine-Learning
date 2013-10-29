@@ -64,5 +64,18 @@ In the Bayesian \(or epistemological\) interpretation, probability measures *a d
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 
+Pros. & Cons. of Bayes (p23.)
+---------------
+**Pros.**
+
+- 1) **The inclusion of prior knowledge in Bayes theorem (Formula 1.12) arises naturally.
+** This **means** Bayes theorem coincides with the cognition of people to the world. 
+*Ex. After one observes a result, he/she will improve his/her assumption.*
+
+**Cons.**
+
+- 1) **The selection of the prior distribution.** 
+Bayesian methods based on poor choices of prior can give poor results with high confidence.
+- 
 <script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
 
