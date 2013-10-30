@@ -90,7 +90,9 @@ We should understand the difference between **likelihood** and **probability**
 **p(w|D)=p(D|w)p(w)/p(D)**, 
 如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
 相当于最大化了后验概率p(w|D),通过公式推导 Formula 1.67: 其实在线性拟合上 **Maximizing likelihood function**和**sum-of-squares**
-是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。
+是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。其中最精华的部分我想是反向思维:
+* 正向思维是如何构建一条直线拟合这些点
+* Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率
 
 <h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
 Please list some methods: 
