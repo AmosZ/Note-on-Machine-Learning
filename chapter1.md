@@ -37,12 +37,19 @@ Chapter 1
 	- exploitation : make use of the actions that are known to yield a high reward.
 
 Do you remember PSO ???
+
+![Alt text](http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29)
+
+![text](http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29)
+<!--
 $$
 V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
 $$
 $$
 X(t+1) = X(t) + V(t+1)
 $$
+http://latex.codecogs.com/gif.latex?V(t&plus;1)&space;=&space;w*V(t)&space;&plus;&space;C_{1}*R_{1}*(P(t)&space;-&space;X(t))&space;&plus;&space;C_{2}*R_{2}*(G(t)&space;-&space;X(t))
+-->
 
 It also need a balance between **exploitation** and **exploration**. But it has a global attraction when particle explore the unknown space. It is lucky...
 
@@ -51,10 +58,9 @@ It also need a balance between **exploitation** and **exploration**. But it has 
 
 2.Bayes' theorem
 --------------------------------
-$$
-p\(w|D\) = \frac{p\(D|w\)p\(w\)}{p\(D\)}
-$$
-In that example,Bayes’ theorem was used to *convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.* 
+![Bayes theorem](http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D)
+
+In that example,Bayes' theorem was used to *convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.* 
 **We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.**
 
 - We capture our assumptions about w, before observing the data, in the form of a prior probability distribution p(w). 

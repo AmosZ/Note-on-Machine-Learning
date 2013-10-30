@@ -49,13 +49,20 @@ Make a balance of exploration and exploitation</p>
 </ul></li>
 </ul>
 
-<p>Do you remember PSO ???
+<p>Do you remember PSO ???</p>
+
+<p><img src="http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29" alt="Alt text" title="" /></p>
+
+<p><img src="http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29" alt="text" title="" />
+<!--
 $$
-V(t+1) = w*V(t) + C_{1}*R_{1}*(P(t) - X(t)) + C_{2}*R_{2}*(G(t) - X(t))
+V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
 $$
 $$
 X(t+1) = X(t) + V(t+1)
-$$</p>
+$$
+http://latex.codecogs.com/gif.latex?V(t&plus;1)&space;=&space;w*V(t)&space;&plus;&space;C_{1}*R_{1}*(P(t)&space;-&space;X(t))&space;&plus;&space;C_{2}*R_{2}*(G(t)&space;-&space;X(t))
+--></p>
 
 <p>It also need a balance between <strong>exploitation</strong> and <strong>exploration</strong>. But it has a global attraction when particle explore the unknown space. It is lucky...</p>
 
@@ -63,10 +70,9 @@ $$</p>
 
 <h2>2.Bayes' theorem</h2>
 
-<p>$$
-p(w|D) = \frac{p(D|w)p(w)}{p(D)}
-$$
-In that example,Bayes’ theorem was used to <em>convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.</em> 
+<p><img src="http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D" alt="Bayes theorem" title="" /></p>
+
+<p>In that example,Bayes' theorem was used to <em>convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.</em> 
 <strong>We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.</strong></p>
 
 <ul>
@@ -75,5 +81,22 @@ In that example,Bayes’ theorem was used to <em>convert a prior probability int
 </ul>
 
 <p>In the Bayesian (or epistemological) interpretation, probability measures <em>a degree of belief</em>.</p>
+
+<h2>Pros. &amp; Cons. of Bayes (p23.)</h2>
+
+<p><strong>Pros.</strong></p>
+
+<ul>
+<li>1) <strong>The inclusion of prior knowledge in Bayes theorem (Formula 1.12) arises naturally.
+<em>* This *</em>means</strong> Bayes theorem coincides with the cognition of people to the world. 
+<em>Ex. After one observes a result, he/she will improve his/her assumption.</em></li>
+</ul>
+
+<p><strong>Cons.</strong></p>
+
+<ul>
+<li>1) <strong>The selection of the prior distribution.</strong> 
+Bayesian methods based on poor choices of prior can give poor results with high confidence.</li>
+</ul>
 
 <script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
