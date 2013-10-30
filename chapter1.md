@@ -1,4 +1,3 @@
-
 Chapter 1
 ======================
 
@@ -87,8 +86,14 @@ We should understand the difference between **likelihood** and **probability**
 * Likelihood is used when describing *a function of a parameter given an outcome*. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?
 
 <h4 id=why_likelihood> Why we should maximum likelihood function?</h4>
+根据PRML公式1.43 
+**p(w|D)=p(D|w)p(w)/p(D)**, 
+如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
+相当于最大化了后验概率p(w|D),通过公式推导 Formula 1.67: 其实在线性拟合上 **Maximizing likelihood function**和**sum-of-squares**
+是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。
 
-
+<h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
+Please list some methods: 
 
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
