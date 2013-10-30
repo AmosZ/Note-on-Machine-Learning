@@ -1,7 +1,12 @@
+
 Chapter 1
 ======================
 
-1.Introduction
+* [Introduction](#introduction)
+* [Bayes' theorem](#bayes)
+	* [Problems](#bayes_problem)
+
+<h2 id=introduction>1.Introduction</h2>
 ------------------------
 **Training Set** : is used to tune the **parameters** of an adaptive model
 
@@ -37,53 +42,54 @@ Chapter 1
 	- exploitation : make use of the actions that are known to yield a high reward.
 
 Do you remember PSO ???
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29>
+</p>
 
-![Alt text](http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29)
-
-![text](http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29)
-<!--
-$$
-V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
-$$
-$$
-X(t+1) = X(t) + V(t+1)
-$$
-http://latex.codecogs.com/gif.latex?V(t&plus;1)&space;=&space;w*V(t)&space;&plus;&space;C_{1}*R_{1}*(P(t)&space;-&space;X(t))&space;&plus;&space;C_{2}*R_{2}*(G(t)&space;-&space;X(t))
-
-
--->
-
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29>
+</p>
 It also need a balance between **exploitation** and **exploration**. But it has a global attraction when particle explore the unknown space. It is lucky...
 
 **Deep Learning** : a new branch of machine learning. [wikipedia][deep_learning]
 
-
-2.Bayes' theorem
+<h2 id=bayes>2.Bayes' theorem</h2>
 --------------------------------
-![Bayes theorem](http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D)
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D>
+</p>
+Bayes' theorem can be used to 
 
-In that example,Bayes' theorem was used to *convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.* 
-**We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.**
+1. convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. 
+2. We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(**????How???**)
 
-- We capture our assumptions about w, before observing the data, in the form of a prior probability distribution p(w). 
-- The **effect** of the observed data D = {t1 , . . . , tN } is expressed through the **conditional probability p(D|w)**, and we shall see later how this can be represented explicitly.
+Explanation
 
-In the Bayesian \(or epistemological\) interpretation, probability measures *a degree of belief*.
+* p(w):the prior, is the initial degree of belief in w. 
+* p(w|D):the posterior, is the degree of belief having accounted for D.
+* p(D|w)/p(D): represents the support D provides for w.
+
+In the Bayesian \(or epistemological\) interpretation, probability measures **a degree of belief**.
+
+Conlusion on Bayes: 
+
+- Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption.所以如何用一种迭代的方式，不断更新poster probability?
+- Bayesian methods based on poor choices of prior can give poor results with high confidence. 如何选择prior distribution也是个问题
+
+<h3 id=bayes_problem>Problem:</h3>
+<h4 id=likelihood>What is likelihood function?</h4>
+[Likelihood function in wikipedia][Likelihood function]
+
+In statistics, a likelihood function (often simply the likelihood) is a **function of the parameters of a statistical model**.
+We should understand the difference between **likelihood** and **probability**
+
+* Probability is used when describing *a function of the outcome given a fixed parameter value*. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? 
+* Likelihood is used when describing *a function of a parameter given an outcome*. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?
+
+<h4 id=why_likelihood> Why we should maximum likelihood function?</h4>
+
+
+
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
-
-Pros. & Cons. of Bayes (p23.)
----------------
-**Pros.**
-
-- 1) **The inclusion of prior knowledge in Bayes theorem (Formula 1.12) arises naturally.
-** This **means** Bayes theorem coincides with the cognition of people to the world. 
-*Ex. After one observes a result, he/she will improve his/her assumption.*
-
-**Cons.**
-
-- 1) **The selection of the prior distribution.** 
-Bayesian methods based on poor choices of prior can give poor results with high confidence.
-
-<script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
-
+[Likelihood function]: https://en.wikipedia.org/wiki/Likelihood_function

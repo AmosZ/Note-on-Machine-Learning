@@ -1,6 +1,16 @@
 <h1>Chapter 1</h1>
 
-<h2>1.Introduction</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#bayes">Bayes' theorem</a>
+<ul>
+<li><a href="#bayes_problem">Problems</a></li>
+</ul></li>
+</ul>
+
+<h2 id=introduction>1.Introduction</h2>
+
+<hr />
 
 <p><strong>Training Set</strong> : is used to tune the <strong>parameters</strong> of an adaptive model</p>
 
@@ -51,52 +61,62 @@ Make a balance of exploration and exploitation</p>
 
 <p>Do you remember PSO ???</p>
 
-<p><img src="http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29" alt="Alt text" title="" /></p>
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29>
+</p>
 
-<p><img src="http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29" alt="text" title="" />
-<!--
-$$
-V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
-$$
-$$
-X(t+1) = X(t) + V(t+1)
-$$
-http://latex.codecogs.com/gif.latex?V(t&plus;1)&space;=&space;w*V(t)&space;&plus;&space;C_{1}*R_{1}*(P(t)&space;-&space;X(t))&space;&plus;&space;C_{2}*R_{2}*(G(t)&space;-&space;X(t))
---></p>
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29>
+</p>
 
 <p>It also need a balance between <strong>exploitation</strong> and <strong>exploration</strong>. But it has a global attraction when particle explore the unknown space. It is lucky...</p>
 
 <p><strong>Deep Learning</strong> : a new branch of machine learning. <a href="http://en.wikipedia.org/wiki/Deep_learning">wikipedia</a></p>
 
-<h2>2.Bayes' theorem</h2>
+<h2 id=bayes>2.Bayes' theorem</h2>
 
-<p><img src="http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D" alt="Bayes theorem" title="" /></p>
+<hr />
 
-<p>In that example,Bayes' theorem was used to <em>convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data.</em> 
-<strong>We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.</strong></p>
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D>
+</p>
 
-<ul>
-<li>We capture our assumptions about w, before observing the data, in the form of a prior probability distribution p(w). </li>
-<li>The <strong>effect</strong> of the observed data D = {t1 , . . . , tN } is expressed through the <strong>conditional probability p(D|w)</strong>, and we shall see later how this can be represented explicitly.</li>
-</ul>
+<p>Bayes' theorem can be used to </p>
 
-<p>In the Bayesian (or epistemological) interpretation, probability measures <em>a degree of belief</em>.</p>
+<ol>
+<li>convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. </li>
+<li>We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(<strong>????How???</strong>)</li>
+</ol>
 
-<h2>Pros. &amp; Cons. of Bayes (p23.)</h2>
-
-<p><strong>Pros.</strong></p>
-
-<ul>
-<li>1) <strong>The inclusion of prior knowledge in Bayes theorem (Formula 1.12) arises naturally.
-<em>* This *</em>means</strong> Bayes theorem coincides with the cognition of people to the world. 
-<em>Ex. After one observes a result, he/she will improve his/her assumption.</em></li>
-</ul>
-
-<p><strong>Cons.</strong></p>
+<p>Explanation</p>
 
 <ul>
-<li>1) <strong>The selection of the prior distribution.</strong> 
-Bayesian methods based on poor choices of prior can give poor results with high confidence.</li>
+<li>p(w):the prior, is the initial degree of belief in w. </li>
+<li>p(w|D):the posterior, is the degree of belief having accounted for D.</li>
+<li>p(D|w)/p(D): represents the support D provides for w.</li>
 </ul>
 
-<script type="text/javascript" src="http://benweet.github.io/stackedit/lib/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<p>In the Bayesian (or epistemological) interpretation, probability measures <strong>a degree of belief</strong>.</p>
+
+<p>Conlusion on Bayes: </p>
+
+<ul>
+<li>Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption.所以如何用一种迭代的方式，不断更新poster probability?</li>
+<li>Bayesian methods based on poor choices of prior can give poor results with high confidence. 如何选择prior distribution也是个问题</li>
+</ul>
+
+<h3 id=bayes_problem>Problem:</h3>
+
+<h4 id=likelihood>What is likelihood function?</h4>
+
+<p><a href="https://en.wikipedia.org/wiki/Likelihood_function">Likelihood function in wikipedia</a></p>
+
+<p>In statistics, a likelihood function (often simply the likelihood) is a <strong>function of the parameters of a statistical model</strong>.
+We should understand the difference between <strong>likelihood</strong> and <strong>probability</strong></p>
+
+<ul>
+<li>Probability is used when describing <em>a function of the outcome given a fixed parameter value</em>. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? </li>
+<li>Likelihood is used when describing <em>a function of a parameter given an outcome</em>. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?</li>
+</ul>
+
+<h4 id=why_likelihood> Why we should maximum likelihood function?</h4>
