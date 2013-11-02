@@ -96,7 +96,9 @@ We should understand the difference between **likelihood** and **probability**
 
 <h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
 Please list some methods: 
-
+- 1) Cross-validation
+- 2) Leave-one-out technique
+- 3) Various "information criteria" method
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 [Likelihood function]: https://en.wikipedia.org/wiki/Likelihood_function
