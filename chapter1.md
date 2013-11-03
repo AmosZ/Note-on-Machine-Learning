@@ -77,15 +77,30 @@ Conlusion on Bayes:
 
 <h3 id=bayes_problem>Problem:</h3>
 <h4 id=likelihood>What is likelihood function?</h4>
-[Likelihood function in wikipedia][Likelihood function]
+In statistics, a likelihood function is a **function of the parameters of a statistical model**.[wikipedia][Likelihood function]
+The likelihood of a set of parameter values, w, given outcomes D, is equal to the probability of those observed outcomes given those parameter values
 
-In statistics, a likelihood function (often simply the likelihood) is a **function of the parameters of a statistical model**.
 We should understand the difference between **likelihood** and **probability**
 
 * Probability is used when describing *a function of the outcome given a fixed parameter value*. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? 
 * Likelihood is used when describing *a function of a parameter given an outcome*. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?
 
 <h4 id=why_likelihood> Why we should maximum likelihood function?</h4>
+*Maximum-likelihood estimation* is a method of estimating the parameters of a statistical model.
+
+In general, for 
+
+* a fixed set of data and 
+* underlying statistical model
+
+the method of maximum likelihood selects the set of values of the model parameters that maximizes the likelihood function
+Intuitively, this maximizes the "agreement" of the selected model with the observed data
+
+本质上，这里的maximize the aggreement和传统方法的minimize error 是同样的意思。而且对于可能的overfit都有相应的处理方式:
+
+* 对于minimize error : 添加一个惩罚变量![](http://latex.codecogs.com/gif.latex?%5Clambda), 对于越高次放的项（比如x的5次方以上）惩罚的越大。
+* 对于maximize likelihood本身，没有对overfit进行处理。因为likelihood只是bayes theorem其中一部分，但是对于bayes theorem整体，还有一个p(w)的先验概率,通常越负责的，次数越高的，p(w)越低。这里的p(w)和minimize里面的惩罚变量是相同的作用
+
 根据PRML公式1.43 
 **p(w|D)=p(D|w)p(w)/p(D)**, 
 如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
@@ -95,6 +110,8 @@ We should understand the difference between **likelihood** and **probability**
 * Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率
 
 <h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
+**@enoche : What is your meaning of "make full use"??**
+
 Please list some methods: 
 
 
