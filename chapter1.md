@@ -113,7 +113,9 @@ Intuitively, this maximizes the "agreement" of the selected model with the obser
 **@enoche : What is your meaning of "make full use"??**
 
 Please list some methods: 
-
+- 1) Cross-validation
+- 2) Leave-one-out technique
+- 3) Various "information criteria" method
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 [Likelihood function]: https://en.wikipedia.org/wiki/Likelihood_function
