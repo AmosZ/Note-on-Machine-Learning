@@ -101,5 +101,48 @@ X_{norm}\equiv\frac{\sum_{i=1}^Nx_{i}-\sum_{i=1}^N\mu_{i}}{\sqrt{\sum_{i=1}^N}\s
 
 Then ???Why this is useful? What $X_{norm}$ means? What is the \textbf{normal form}?
 
+
+P26. What is figure 1.14 really looks like taking the consideration of $x_n=\aleph(\mu, \sigma^2)$. \\
+
+P27. Please reason Formula 1.57 and Formula 1.58 resulting
+from Formula 1.55 and Formula 1.56 respectively.
+It is said $\mu_ML \sim \aleph(\mu, \sigma^2/n)$ and
+$\sigma^2_{ML} \sim \frac{\sigma^2}{n}\cdot \chi^2_{n-1}$.
+While $\widetilde{\sigma}^2 \sim \frac{\sigma^2}{n-1}\cdot \chi^2_{n-1}$.\\
+And in the textbook, it is said that the maximum likelihood
+approach systematically underestimates the variance
+($\sigma^2_{ML}$) of the distribution because it is
+measured relative to the sample mean and not relative
+to the true mean. Can you link this statement with
+the formula 1.58?\\
+
+1.2.5 (P28-30): Both \emph{maximum likelihood function}
+and \emph{maximum posterior(MAP)} methods are introduced
+for the problem of polynomial curve fitting. While
+in the MAP method, please reasoning the formula 1.67
+from 1.66.\\
+
+1.2.6 (P30-31): How can we get the result of formula 1.69?\\
+
+1.3 (P32): How to make full use of the precious training data?
+1) Cross-validation
+2) Leave-one-out technique
+3) Information criteria method
+
+1.5.1 (P39-40): When minimizing the misclassification rate,
+we should assign each value of $x$ to the class having
+the higher posterior probability $p(C_k|x)$, how should
+we decision the value of $x$? In Figure 1.24, it is said
+the optimal value is where the curves for $p(x, C_1)$
+and $p(x, C_2)$ cross. Why?
+
+1.5.3 (P42): If there are $K$ classes then setting $\theta < 1/ K$
+will ensure that no examples are rejected. That is because
+$\sum^K_{i=1}p(C_k|x)=1$.
+
+1.5.4 (P45) Compensating for class priors: Do not understand the
+last half part...?
+
+
 \end{document}
 
