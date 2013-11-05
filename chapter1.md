@@ -9,8 +9,8 @@ Chapter 1
 ------------------------
 **Training Set** : is used to tune the **parameters** of an adaptive model
 
-- What about adaptive model? How to select adaptive model? 
-- How to design or select an good adaptive model??
+- (P1.1). What about adaptive model? How to select adaptive model? 
+- (P1.2). How to design or select an good adaptive model??
 
 **Learning phase** : The precise form of the function(adaptive model) is determined during the training phase
 
@@ -40,7 +40,7 @@ Chapter 1
 	- exploration : explore the unknow space.
 	- exploitation : make use of the actions that are known to yield a high reward.
 
-Do you remember PSO ???
+Do you remember PSO ???!
 <p align="center">
 <img src=http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29>
 </p>
@@ -60,7 +60,7 @@ It also need a balance between **exploitation** and **exploration**. But it has 
 Bayes' theorem can be used to 
 
 1. convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. 
-2. We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(**????How???**)
+2. (P1.3) We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(**????How???**)
 
 Explanation
 
@@ -72,11 +72,11 @@ In the Bayesian \(or epistemological\) interpretation, probability measures **a 
 
 Conlusion on Bayes: 
 
-- Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption.所以如何用一种迭代的方式，不断更新poster probability?
-- Bayesian methods based on poor choices of prior can give poor results with high confidence. 如何选择prior distribution也是个问题
+- Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption. (P1.4)所以如何用一种迭代的方式，不断更新poster probability?
+- Bayesian methods based on poor choices of prior can give poor results with high confidence. (P1.5)如何选择prior distribution也是个问题?
 
 <h3 id=bayes_problem>Problem:</h3>
-<h4 id=likelihood>What is likelihood function?</h4>
+<h4 id=likelihood>(P1.6)What is likelihood function?</h4>
 [Likelihood function in wikipedia][Likelihood function]
 
 In statistics, a likelihood function (often simply the likelihood) is a **function of the parameters of a statistical model**.
@@ -85,7 +85,7 @@ We should understand the difference between **likelihood** and **probability**
 * Probability is used when describing *a function of the outcome given a fixed parameter value*. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? 
 * Likelihood is used when describing *a function of a parameter given an outcome*. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?
 
-<h4 id=why_likelihood> Why we should maximum likelihood function?</h4>
+<h4 id=why_likelihood> (P1.7)Why we should maximum likelihood function?</h4>
 根据PRML公式1.43 
 **p(w|D)=p(D|w)p(w)/p(D)**, 
 如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
@@ -94,11 +94,24 @@ We should understand the difference between **likelihood** and **probability**
 * 正向思维是如何构建一条直线拟合这些点
 * Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率
 
-<h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
+<h4 id=Use_TrainingData> (P1.8)How to make full use of the precious training data?</h4>
 Please list some methods: 
 - 1) Cross-validation
 - 2) Leave-one-out technique
 - 3) Various "information criteria" method
+
+
+<h4 id=Use_OptimalValue39> (P1.9) How to select optimal value? </h4>
+CH1.5.1 (P39-40): When minimizing the misclassification rate,
+we should assign each value of $x$ to the class having
+the higher posterior probability $p(C_k|x)$, how should
+we decision the value of $x$? In Figure 1.24, it is said
+the optimal value is where the curves for $p(x, C_1)$
+and $p(x, C_2)$ cross. Why?
+
+
+<h4 id=Use_Compensating45> (P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the
+last half part...?</h4>
 
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 [Likelihood function]: https://en.wikipedia.org/wiki/Likelihood_function
