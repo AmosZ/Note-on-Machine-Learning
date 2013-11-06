@@ -154,6 +154,15 @@ Please list some methods:
 2. Leave-one-out technique
 3. Various "information criteria" method
 
+<h4 id=Use_OptimalValue39> 5.How to select optimal value? </h4>
+CH1.5.1 (P39-40): When minimizing the misclassification rate, we should assign each value of x to the class having
+the higher posterior probability p(C\_k|x), how should we decision the value of x? In Figure 1.24, it is said the optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross. Why?
+
+
+<h4 id=Use_Compensating45> (P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the
+last half part...?</h4>
+
+
 <!--Reference-->
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
 [Likelihood function]: https://en.wikipedia.org/wiki/Likelihood_function
