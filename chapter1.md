@@ -13,8 +13,8 @@ Chapter 1
 ------------------------
 **Training Set** : is used to tune the **parameters** of an adaptive model
 
-- What about adaptive model? How to select adaptive model? 
-- How to design or select an good adaptive model??
+- (P1.1). What about adaptive model? How to select adaptive model? 
+- (P1.2). How to design or select an good adaptive model??
 
 **Learning phase** : The precise form of the function(adaptive model) is determined during the training phase
 
@@ -64,7 +64,7 @@ It also need a balance between **exploitation** and **exploration**. But it has 
 Bayes' theorem can be used to 
 
 1. convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. 
-2. We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(**????How???**)
+2. (P1.3) We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(**????How???**)
 
 Explanation
 
@@ -84,6 +84,7 @@ Conlusion on Bayes:
 In statistics, a likelihood function is a **function of the parameters of a statistical model**.[wikipedia][Likelihood function]
 The likelihood of a set of parameter values, w, given outcomes D, is equal to the probability of those observed outcomes given those parameter values
 
+In statistics, a likelihood function (often simply the likelihood) is a **function of the parameters of a statistical model**.
 We should understand the difference between **likelihood** and **probability**
 
 * Probability is used when describing *a function of the outcome given a fixed parameter value*. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? 
@@ -110,7 +111,6 @@ Intuitively, this maximizes the "agreement" of the selected model with the obser
 如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
 相当于最大化了后验概率p(w|D),通过公式推导 Formula 1.67: 其实在线性拟合上 **Maximizing likelihood function**和**sum-of-squares**
 是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。其中最精华的部分我想是反向思维:
-
 * 正向思维是如何构建一条直线拟合这些点
 * Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率
 
