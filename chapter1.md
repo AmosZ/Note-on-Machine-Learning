@@ -163,9 +163,9 @@ the higher posterior probability p(C\_k|x), how should we decision the value of 
 </p>
 **Answer** : I think this is not an issue. Because this is a decision problem in which p(x) is known. 
 
-In Figure 1.24, it is said the optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross. Why?
+In Figure 1.24(shown as below), it is said the optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross. Why?
 <p align=center>
-<img src=https://github.com/AmosZ/Note-on-Machine-Learning/blob/master/img/Decision_Theory.png></img>
+<img src=https://github.com/AmosZ/Note-on-Machine-Learning/blob/master/img/Decision_Theory.png?raw=true></img>
 </p>
 We know that our target is to minimize :
 <p align=center>
