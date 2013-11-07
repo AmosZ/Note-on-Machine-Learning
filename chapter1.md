@@ -185,6 +185,31 @@ So optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross
 <h4 id=Use_Compensating45> (P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the
 last half part...?</h4>
 
+<h2>3.Minimizing an error function and Bayesian approach in curve fitting</h2>
+---------------------------------------------
+Fit the data using a **polynomial function** of the form:
+<p align=center>
+<!-- y(x,\mathbf{w}) = w_0 + w_1x + w_{2}x^2 + ... + w_{m}x^M = \sum_{j=0}^{M}w_{j}x^j -->
+<img src=http://latex.codecogs.com/svg.latex?y%28x%2C%5Cmathbf%7Bw%7D%29%20%3D%20w_0%20&plus;%20w_1x%20&plus;%20w_%7B2%7Dx%5E2%20&plus;%20...%20&plus;%20w_%7Bm%7Dx%5EM%20%3D%20%5Csum_%7Bj%3D0%7D%5E%7BM%7Dw_%7Bj%7Dx%5Ej></img>
+</p>
+
+For data point x\_n and target value t\_n, error function is :
+<!-- E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}\{y(x_n,\textbf{w}) - t_n\}^2 -->
+<p align=center>
+<img src= http://latex.codecogs.com/svg.latex?E%28%5Ctextbf%7Bw%7D%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%5C%7By%28x_n%2C%5Ctextbf%7Bw%7D%29%20-%20t_n%5C%7D%5E2></img>
+</p>
+
+Then we need a regulator to prevent overfit:
+<!-- \widetilde{E}(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}\{y(x_n,\textbf{w}) - t_n\}^2 + \frac{\lambda}{2}||w||^2 -->
+<p align=center>
+<img src= http://latex.codecogs.com/svg.latex?%5Cwidetilde%7BE%7D%28%5Ctextbf%7Bw%7D%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%5C%7By%28x_n%2C%5Ctextbf%7Bw%7D%29%20-%20t_n%5C%7D%5E2%20&plus;%20%5Cfrac%7B%5Clambda%7D%7B2%7D%7C%7Cw%7C%7C%5E2></img>
+</p>
+where : 
+<!-- ||w||^2 = \mathbf{w}^T\mathbf{w} = w_0^2 + w_1^2 + ... + w_M^2 -->
+<p align=center>
+<img src= http://latex.codecogs.com/svg.latex?%7C%7Cw%7C%7C%5E2%20%3D%20%5Cmathbf%7Bw%7D%5ET%5Cmathbf%7Bw%7D%20%3D%20w_0%5E2%20&plus;%20w_1%5E2%20&plus;%20...%20&plus;%20w_M%5E2></img>
+</p>
+
 
 <!--Reference-->
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
