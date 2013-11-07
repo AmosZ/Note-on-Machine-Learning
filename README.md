@@ -1,15 +1,12 @@
-Start with Latex : 
-* http://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux
-* https://pangea.stanford.edu/computing/unix/formatting/latexexample.php
-
-Draw picture in Latex:
-* http://www.texample.net/
-
 Markdown : 
 * Introduce to Markdown : http://markdown.tw/
 * Free Markdown online editor: http://benweet.github.io/stackedit/
-
-**Note** : 如果要在markdown语法中利用mathjax插入公式，必须要把markdown自己的标识符escape掉，比如
-V\(t+1\) = w\*V\(t\) + C\_{1}\*R\_{1}\*\(P\(t\) - X\(t\)\) + C\_{2}\*R\_{2}\*\(G\(t\) - X\(t\)\)
-
-I think we should adhere to a code style...
+=要做成什么样子?=
+我想笔记应该有三个阶段：
+1. 开始的时候，对本书不是很了解。只是将觉得重要的知识点用自己理解的方式记录下来。可能很多的语句都是从书本上摘录下来的。自己的思想在笔记里的含量较少。
+2. 第二个阶段，自己有了很多的思考，对其中的很多知识点不理解。于是把这些问题记录下来。
+3. 第三个阶段，书上不明白的东西越来越少，笔记中从书本摘录下来的东西越来越少。更多的是自己的理解。此时笔记也不一定是拘泥于本书了，而是以本书所阐述的问题为中心，大量的是自己的理解以及别的地方的参考。
+=如何做？=
+....
+=编码规范=
+...
