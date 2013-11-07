@@ -154,10 +154,30 @@ Please list some methods:
 2. Leave-one-out technique
 3. Various "information criteria" method
 
-<h4 id=Use_OptimalValue39> 5.How to select optimal value? </h4>
+<h4 id=Use_OptimalValue39> 5.How to select optimal value(minimizing the misclassification rage)? </h4>
 CH1.5.1 (P39-40): When minimizing the misclassification rate, we should assign each value of x to the class having
-the higher posterior probability p(C\_k|x), how should we decision the value of x? In Figure 1.24, it is said the optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross. Why?
+the higher posterior probability p(C\_k|x), how should we decision the value of x? 
+<p align=center>
+<!--p(mistake) = p(x\in R_1,C_2)+p(x\in R_2,C_1) = \int_{R_1}p(x,C_2)dx + \int_{R_2}p(x,C_1)dx-->
+<img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx></img>
+</p>
+**Answer** : I think this is not an issue. Because this is a decision problem in which p(x) is known. 
 
+In Figure 1.24, it is said the optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross. Why?
+<p align=center>
+<img src=https://github.com/AmosZ/Note-on-Machine-Learning/blob/master/img/Decision_Theory.png></img>
+</p>
+We know that our target is to minimize :
+<p align=center>
+<!--p(mistake) = p(x\in R_1,C_2)+p(x\in R_2,C_1) = \int_{R_1}p(x,C_2)dx + \int_{R_2}p(x,C_1)dx-->
+<img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx></img>
+</p>
+So we should assign arrange that each x is assigned to whichever class has the smaller value of the integrand in this formular.In other word, if p(x, C1 ) > p(x, C2 ) for a given value of x, then we should assign that x to class C1. When x^ is equal to x0:
+
+* if x in R1, p(x,C1) > p(x,C2),
+* if x in R2, p(x,C2) > p(x,C1).
+
+So optimal value is where the curves for p(x, C\_1) and p(x, C\_2) cross
 
 <h4 id=Use_Compensating45> (P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the
 last half part...?</h4>
