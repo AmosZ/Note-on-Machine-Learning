@@ -94,6 +94,7 @@ We should understand the difference between **likelihood** and **probability**
 * 正向思维是如何构建一条直线拟合这些点
 * Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率
 
+<h4 id=limit_of_maxlikelihood></h4>
 <h4 id=Use_TrainingData> How to make full use of the precious training data?</h4>
 Please list some methods: 
 - 1) Cross-validation
