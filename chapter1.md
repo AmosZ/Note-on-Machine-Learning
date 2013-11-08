@@ -187,6 +187,8 @@ last half part...?</h4>
 
 <h2>3.Minimizing an error function and Bayesian approach in curve fitting</h2>
 ---------------------------------------------
+### 3.1 Minimizing an error function
+
 Fit the data using a **polynomial function** of the form:
 <p align=center>
 <!-- y(x,\mathbf{w}) = w_0 + w_1x + w_{2}x^2 + ... + w_{m}x^M = \sum_{j=0}^{M}w_{j}x^j -->
@@ -210,6 +212,15 @@ where :
 <img src= http://latex.codecogs.com/svg.latex?%7C%7Cw%7C%7C%5E2%20%3D%20%5Cmathbf%7Bw%7D%5ET%5Cmathbf%7Bw%7D%20%3D%20w_0%5E2%20&plus;%20w_1%5E2%20&plus;%20...%20&plus;%20w_M%5E2></img>
 </p>
 
+### 3.2 Bayesian approach in curve fitting
+<!-- \mathbf{x} = \left ( x_1, \cdots,x_n \right )^ \mathrm{T} -->
+Given <img src=http://latex.codecogs.com/svg.latex?%5Cmathbf%7Bx%7D%20%3D%20%5Cleft%20%28%20x_1%2C%20%5Ccdots%2Cx_n%20%5Cright%20%29%5E%20%5Cmathrm%7BT%7D> and their corresponding target value <img src=http://latex.codecogs.com/svg.latex?%5Cmathbf%7Bt%7D%20%3D%20%5Cleft%20%28%20t_1%2C%20%5Ccdots%2Ct_n%20%5Cright%20%29%5E%20%5Cmathrm%7BT%7D>
+
+So we have
+
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?p%5Cleft%20%28%20t%7Cx%2C%5Cmathbf%7Bw%7D%2C%5Cbeta%20%5Cright%20%29%20%3D%20N%5Cleft%20%28%20t%7Cy%5Cleft%20%28%20x%2C%5Cmathbf%7Bx%7D%20%5Cright%20%29%2C%5Cbeta%5E%7B-1%7D%20%5Cright%20%29>
+</p>
 
 <!--Reference-->
 [deep_learning]: http://en.wikipedia.org/wiki/Deep_learning
