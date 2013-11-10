@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Note of ML</title><link href="http://amosz.github.io/Note-on-Machine-Learning/" rel="alternate"></link><link href="http://amosz.github.io/Note-on-Machine-Learning/feeds/pattern-recognition-and-machine-learning.atom.xml" rel="self"></link><id>http://amosz.github.io/Note-on-Machine-Learning/</id><updated>2013-10-03T00:00:00Z</updated><entry><title>Chapter 1</title><link href="http://amosz.github.io/Note-on-Machine-Learning/chapter-1.html" rel="alternate"></link><updated>2013-10-03T00:00:00Z</updated><author><name>Amos Zhu and Enoche Zhou</name></author><id>tag:amosz.github.io/Note-on-Machine-Learning,2013-10-03:chapter-1.html</id><summary type="html">&lt;h1&gt;1.Introduction&lt;/h1&gt;
+&lt;h2 id=introduction&gt;1.Introduction&lt;/h2&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Training Set&lt;/strong&gt; : is used to tune the &lt;strong&gt;parameters&lt;/strong&gt; of an adaptive model&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What about adaptive model? How to select adaptive model? &lt;/li&gt;
+&lt;li&gt;How to design or select an good adaptive model??&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Learning phase&lt;/strong&gt; : The precise form of the function(adaptive model) is determined during the training phase&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;General Workflow&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Preprocess:&lt;ul&gt;
+&lt;li&gt;Normalization : For example : transforming different size of pics to the same one&lt;/li&gt;
+&lt;li&gt;Reduction : Reduce dimension or quantity, to speed up comuputation. &lt;code&gt;How to reduce dimension/quantity while preserving the information in those data is not easy.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Training&lt;/li&gt;
+&lt;li&gt;Test &lt;/li&gt;
+&lt;li&gt;Output result&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Classification:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;supervised learning : Training data comprise examples of the input vectors &lt;strong&gt;along with&lt;/strong&gt; their corresponding target vectors&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;classification:decrete &lt;/li&gt;
+&lt;li&gt;regression:continuous&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;unsupervised learning : Training data consists a set of input vector x &lt;strong&gt;without&lt;/strong&gt; any corresponding target value&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cluster : to discover group of similar examples&lt;/li&gt;
+&lt;li&gt;density estimation : to determine the distribution of data within the input space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;visualization : to project the data from a high-dimensional space down to two/three dimensions for the purpose of visualization. Data visualization is a hot field now. Is this can be used to preprocess data set,as mention in Reduction?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reinforcement learning: finding suitable actions to take in a given situation in order to maximize a reward.
+    Make a balance of exploration and exploitation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;exploration : explore the unknow space.&lt;/li&gt;
+&lt;li&gt;exploitation : make use of the actions that are known to yield a high reward.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do you remember PSO ???
+&lt;p align="center"&gt;
+&lt;img src=http://latex.codecogs.com/gif.latex?V%28t&amp;plus;1%29%20%3D%20w*V%28t%29%20&amp;plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&amp;plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29&gt;
+&lt;/p&gt;&lt;/p&gt;
+&lt;p align="center"&gt;
+&lt;img src=http://latex.codecogs.com/gif.latex?X%28t&amp;plus;1%29%20%3D%20X%28t%29%20&amp;plus;%20V%28t&amp;plus;1%29&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It also need a balance between &lt;strong&gt;exploitation&lt;/strong&gt; and &lt;strong&gt;exploration&lt;/strong&gt;. But it has a global attraction when particle explore the unknown space. It is lucky...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deep Learning&lt;/strong&gt; : a new branch of machine learning. &lt;a href="http://en.wikipedia.org/wiki/Deep_learning"&gt;wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;2.Bayes' theorem&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;p align="center"&gt;
+&lt;img src=http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D&gt;
+&lt;/p&gt;
+Bayes' theorem can be used to &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. &lt;/li&gt;
+&lt;li&gt;We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(&lt;strong&gt;????How???&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Explanation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;p(w):the prior, is the initial degree of belief in w. &lt;/li&gt;
+&lt;li&gt;p(w|D):the posterior, is the degree of belief having accounted for D.&lt;/li&gt;
+&lt;li&gt;p(D|w)/p(D): represents the support D provides for w.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the Bayesian (or epistemological) interpretation, probability measures &lt;strong&gt;a degree of belief&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Conlusion on Bayes: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption.所以如何用一种迭代的方式，不断更新poster probability?&lt;/li&gt;
+&lt;li&gt;Bayesian methods based on poor choices of prior can give poor results with high confidence. 如何选择prior distribution也是个问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Problem:&lt;/h2&gt;
+&lt;h3&gt;1.What is likelihood function?&lt;/h3&gt;
+&lt;p&gt;In statistics, a likelihood function is a &lt;strong&gt;function of the parameters of a statistical model&lt;/strong&gt;.&lt;a href="https://en.wikipedia.org/wiki/Likelihood_function"&gt;wikipedia&lt;/a&gt;
+The likelihood of a set of parameter values, w, given outcomes D, is equal to the probability of those observed outcomes given those parameter values&lt;/p&gt;
+&lt;p&gt;In statistics, a likelihood function (often simply the likelihood) is a &lt;strong&gt;function of the parameters of a statistical model&lt;/strong&gt;.
+We should understand the difference between &lt;strong&gt;likelihood&lt;/strong&gt; and &lt;strong&gt;probability&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Probability is used when describing &lt;em&gt;a function of the outcome given a fixed parameter value&lt;/em&gt;. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? &lt;/li&gt;
+&lt;li&gt;Likelihood is used when describing &lt;em&gt;a function of a parameter given an outcome&lt;/em&gt;. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2.Why we should maximum likelihood function?&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Maximum-likelihood estimation&lt;/em&gt; is a method of estimating the parameters of a statistical model.&lt;/p&gt;
+&lt;p&gt;In general, for &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a fixed set of data and &lt;/li&gt;
+&lt;li&gt;underlying statistical model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;the method of maximum likelihood selects the set of values of the model parameters that maximizes the likelihood function
+Intuitively, this maximizes the "agreement" of the selected model with the observed data&lt;/p&gt;
+&lt;p&gt;本质上，这里的maximize the aggreement和传统方法的minimize error 是同样的意思。而且对于可能的overfit都有相应的处理方式:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于minimize error : 添加一个惩罚变量$\lambda$, 对于越高次放的项（比如x的5次方以上）惩罚的越大。&lt;/li&gt;
+&lt;li&gt;对于maximize likelihood本身，没有对overfit进行处理。因为likelihood只是bayes theorem其中一部分，但是对于bayes theorem整体，还有一个p(w)的先验概率,通常越负责的，次数越高的，p(w)越低。这里的p(w)和minimize里面的惩罚变量是相同的作用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据PRML公式1.43 
+&lt;strong&gt;p(w|D)=p(D|w)p(w)/p(D)&lt;/strong&gt;, 
+如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
+相当于最大化了后验概率p(w|D),通过公式推导 Formula 1.67: 其实在线性拟合上 &lt;strong&gt;Maximizing likelihood function&lt;/strong&gt;和&lt;strong&gt;sum-of-squares&lt;/strong&gt;
+是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。其中最精华的部分我想是反向思维:
+&lt;em&gt; 正向思维是如何构建一条直线拟合这些点
+&lt;/em&gt; Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率&lt;/p&gt;
+&lt;h3&gt;3.limitations of the maximum likelihood approach&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Suppose:&lt;/strong&gt; the observations are drawn independently from a Gaussian distribution whose &lt;strong&gt;mean μ and variance σ 2 are unknown&lt;/strong&gt;, and we would like to determine these parameters from the data set.&lt;/p&gt;
+&lt;p&gt;we can therefore write the probability of the data set, given μ and σ^2 ,
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?p%28x%7C%5Cmu%2C%5Csigma%5E2%29%20%3D%20%5Cprod_%7Bn%3D1%7D%5E%7BN%7DN%28x_n%7C%5Cmu%2C%5Csigma%5E2%29&gt;&lt;/img&gt;
+&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;log likelihood:
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?ln%5Crho%20%28x%7C%5Cmu%2C%5Csigma%5E2%29%20%3D%20-%5Cfrac%7B1%7D%7B2%5Csigma%5E2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%28x_n-%5Cmu%29%5E2-%5Cfrac%7BN%7D%7B2%7Dln%5Csigma%5E2-%5Cfrac%7BN%7D%7B2%7Dln%282%5Cpi%29&gt;&lt;/img&gt;
+&lt;/p&gt;
+Maximizing  with respect to μ, 
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?%5Cmu_%7BML%7D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7Dx_n&gt;&lt;/img&gt;
+&lt;/p&gt;
+maximizing with respect to σ^2
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?%5Csigma_%7BML%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%28x_n%20-%20%5Cmu_%7BML%7D%29%5E2&gt;&lt;/img&gt;
+&lt;/p&gt;
+We can see that: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;on average the maximum likelihood estimate will obtain the correct mean &lt;/li&gt;
+&lt;li&gt;but will &lt;strong&gt;underestimate the true variance by a factor (N − 1)/N&lt;/strong&gt;. &lt;strong&gt;How to get this ?????&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?E%5B%5Cmu_%7BML%7D%5D%20%3D%20%5Cmu&gt;&lt;/img&gt;
+&lt;/p&gt;
+
+&lt;p align=center&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?E%5B%5Csigma_%7BML%7D%5E2%5D%20%3D%20%28%5Cfrac%7BN-1%7D%7BN%7D%29%5Csigma%5E2
+&gt;&lt;/img&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;4.How to make full use of the precious training data?&lt;/h3&gt;
+&lt;p&gt;Please list some methods: 
+- 1) Cross-validation
+- 2) Leave-one-out technique
+- 3) Various "information criteria" method&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Leave-one-out technique&lt;/li&gt;
+&lt;li&gt;Various "information criteria" method&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;5.How to select optimal value(minimizing the misclassification rage)?&lt;/h3&gt;
+&lt;p&gt;CH1.5.1 (P39-40): When minimizing the misclassification rate, we should assign each value of x to the class having
+the higher posterior probability p(C_k|x), how should we decision the value of x? 
+&lt;p align=center&gt;
+&lt;!--p(mistake) = p(x\\in R_1,C_2)+p(x\\in R_2,C_1) = \\int_{R_1}p(x,C_2)dx + \\int_{R_2}p(x,C_1)dx--&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&amp;plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&amp;plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx&gt;&lt;/img&gt;
+&lt;/p&gt;
+&lt;strong&gt;Answer&lt;/strong&gt; : I think this is not an issue. Because this is a decision problem in which p(x) is known. &lt;/p&gt;
+&lt;p&gt;In Figure 1.24(shown as below), it is said the optimal value is where the curves for p(x, C_1) and p(x, C_2) cross. Why?
+&lt;p align=center&gt;
+&lt;img src=https://github.com/AmosZ/Note-on-Machine-Learning/blob/master/img/Decision_Theory.png?raw=true&gt;&lt;/img&gt;
+&lt;/p&gt;
+We know that our target is to minimize :
+&lt;p align=center&gt;
+&lt;!--p(mistake) = p(x\\in R_1,C_2)+p(x\\in R_2,C_1) = \\int_{R_1}p(x,C_2)dx + \\int_{R_2}p(x,C_1)dx--&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&amp;plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&amp;plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx&gt;&lt;/img&gt;
+&lt;/p&gt;
+So we should assign arrange that each x is assigned to whichever class has the smaller value of the integrand in this formular.In other word, if p(x, C1 ) &amp;gt; p(x, C2 ) for a given value of x, then we should assign that x to class C1. When x^ is equal to x0:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if x in R1, p(x,C1) &amp;gt; p(x,C2),&lt;/li&gt;
+&lt;li&gt;if x in R2, p(x,C2) &amp;gt; p(x,C1).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So optimal value is where the curves for p(x, C_1) and p(x, C_2) cross&lt;/p&gt;
+&lt;h3&gt;(P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the&lt;/h3&gt;
+&lt;p&gt;last half part...?&lt;/p&gt;
+&lt;h1&gt;3.Minimizing an error function and Bayesian approach in curve fitting&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;Fit the data using a &lt;strong&gt;polynomial function&lt;/strong&gt; of the form:
+&lt;p align=center&gt;
+&lt;!-- y(x,\\mathbf{w}) = w_0 + w_1x + w_{2}x^2 + ... + w_{m}x^M = \\sum_{j=0}^{M}w_{j}x^j --&gt;
+&lt;img src=http://latex.codecogs.com/svg.latex?y%28x%2C%5Cmathbf%7Bw%7D%29%20%3D%20w_0%20&amp;plus;%20w_1x%20&amp;plus;%20w_%7B2%7Dx%5E2%20&amp;plus;%20...%20&amp;plus;%20w_%7Bm%7Dx%5EM%20%3D%20%5Csum_%7Bj%3D0%7D%5E%7BM%7Dw_%7Bj%7Dx%5Ej&gt;&lt;/img&gt;
+&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;For data point x_n and target value t_n, error function is :
+&lt;!-- E(\\textbf{w}) = \\frac{1}{2}\\sum_{n=1}^{N}\{y(x_n,\\textbf{w}) - t_n\}^2 --&gt;
+&lt;p align=center&gt;
+&lt;img src= http://latex.codecogs.com/svg.latex?E%28%5Ctextbf%7Bw%7D%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%5C%7By%28x_n%2C%5Ctextbf%7Bw%7D%29%20-%20t_n%5C%7D%5E2&gt;&lt;/img&gt;
+&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;Then we need a regulator to prevent overfit:
+$$
+    \widetilde{E}(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}{y(x_n,\textbf{w}) - t_n}^2 + \frac{\lambda}{2}||w||^2
+$$
+where : 
+$||w||^2 = \mathbf{w}^T\mathbf{w} = w_0^2 + w_1^2 + ... + w_M^2$&lt;/p&gt;
+&lt;!--Reference--&gt;</summary></entry></feed>
