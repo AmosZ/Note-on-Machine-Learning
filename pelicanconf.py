@@ -21,6 +21,9 @@ TRANSLATION_FEED_ATOM = None
 PLUGIN_PATH = '/home/zq/Project/pelican/pelican-plugins-master'
 PLUGINS = ['latex']
 
+#URL
+GITHUB_URL = 'http://amosz.github.io/Note-on-Machine-Learning'
+SITEURL = 'http://amosz.github.io/Note-on-Machine-Learning'
 # Blogroll
 # LINKS =  (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
