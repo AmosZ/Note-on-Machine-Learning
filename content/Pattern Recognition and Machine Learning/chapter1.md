@@ -3,6 +3,7 @@ Date:2013-10-03
 
 # 1.Introduction
 
+<h2 id=introduction>1.Introduction</h2>
 ------------------------
 **Training Set** : is used to tune the **parameters** of an adaptive model
 
