@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Chapter 1</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+            
+    <script type= "text/javascript">
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'; 
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" + 
+            "    config: ['MMLorHTML.js']," + 
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS','output/NativeMML']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," + 
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax .mo, .MathJax .mi': {color: 'black ! important'}} " +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    </script>
+
+
+        <link href="/" type="application/atom+xml" rel="alternate" title="Note of ML ATOM Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="/css/ie.css"/>
+                <script src="/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="">Note of ML </a></h1>
+                <nav><ul>
+		    <li class="active"><a href="/category/pattern-recognition-and-machine-learning.html">Pattern Recognition and Machine Learning</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+        
+<section id="content" class="body">    
+<article>
+<footer style="float: right" class="post-info">
+        <abbr class="published" title="2013-10-03T00:00:00">
+                Thu 03 October 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/amos-zhu-and-enoche-zhou.html">Amos Zhu and Enoche Zhou</a>
+        </address>
+ 
+</footer>        <header> 
+            <h1 class="entry-title"><a href="" rel="bookmark" title="Permalink to Chapter 1">Chapter 1</a></h1> 
+        </header>
+        <div class="entry-content">
+        <h1>1.Introduction</h1>
+<hr />
+<p><strong>Training Set</strong> : is used to tune the <strong>parameters</strong> of an adaptive model</p>
+<ul>
+<li>What about adaptive model? How to select adaptive model? </li>
+<li>How to design or select an good adaptive model??</li>
+</ul>
+<p><strong>Learning phase</strong> : The precise form of the function(adaptive model) is determined during the training phase</p>
+<p><strong>General Workflow</strong>:</p>
+<ol>
+<li>Preprocess:<ul>
+<li>Normalization : For example : transforming different size of pics to the same one</li>
+<li>Reduction : Reduce dimension or quantity, to speed up comuputation. <code>How to reduce dimension/quantity while preserving the information in those data is not easy.</code></li>
+</ul>
+</li>
+<li>Training</li>
+<li>Test </li>
+<li>Output result</li>
+</ol>
+<p><strong>Classification:</strong></p>
+<ul>
+<li>
+<p>supervised learning : Training data comprise examples of the input vectors <strong>along with</strong> their corresponding target vectors</p>
+<ul>
+<li>classification:decrete </li>
+<li>regression:continuous</li>
+</ul>
+</li>
+<li>
+<p>unsupervised learning : Training data consists a set of input vector x <strong>without</strong> any corresponding target value</p>
+<ul>
+<li>cluster : to discover group of similar examples</li>
+<li>density estimation : to determine the distribution of data within the input space.</li>
+</ul>
+</li>
+<li>
+<p>visualization : to project the data from a high-dimensional space down to two/three dimensions for the purpose of visualization. Data visualization is a hot field now. Is this can be used to preprocess data set,as mention in Reduction?</p>
+</li>
+<li>
+<p>reinforcement learning: finding suitable actions to take in a given situation in order to maximize a reward.
+    Make a balance of exploration and exploitation</p>
+<ul>
+<li>exploration : explore the unknow space.</li>
+<li>exploitation : make use of the actions that are known to yield a high reward.</li>
+</ul>
+</li>
+</ul>
+<p>Do you remember PSO ???
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?V%28t&plus;1%29%20%3D%20w*V%28t%29%20&plus;%20C_%7B1%7D*R_%7B1%7D*%28P%28t%29%20-%20X%28t%29%29%20&plus;%20C_%7B2%7D*R_%7B2%7D*%28G%28t%29%20-%20X%28t%29%29>
+</p></p>
+<p align="center">
+<img src=http://latex.codecogs.com/gif.latex?X%28t&plus;1%29%20%3D%20X%28t%29%20&plus;%20V%28t&plus;1%29>
+</p>
+
+<p>It also need a balance between <strong>exploitation</strong> and <strong>exploration</strong>. But it has a global attraction when particle explore the unknown space. It is lucky...</p>
+<p><strong>Deep Learning</strong> : a new branch of machine learning. <a href="http://en.wikipedia.org/wiki/Deep_learning">wikipedia</a></p>
+<h1>2.Bayes' theorem</h1>
+<hr />
+<p><p align="center">
+<img src=http://latex.codecogs.com/gif.latex?p%5C%28w%7CD%5C%29%20%3D%20%5Cfrac%7Bp%5C%28D%7Cw%5C%29p%5C%28w%5C%29%7D%7Bp%5C%28D%5C%29%7D>
+</p>
+Bayes' theorem can be used to </p>
+<ol>
+<li>convert a prior probability into a posterior probability by incorporating the evidence provided by the observed data. </li>
+<li>We can adopt a similar approach when making inferences about quantities such as the parameters w in the polynomial curve fitting example.(<strong>????How???</strong>)</li>
+</ol>
+<p>Explanation</p>
+<ul>
+<li>p(w):the prior, is the initial degree of belief in w. </li>
+<li>p(w|D):the posterior, is the degree of belief having accounted for D.</li>
+<li>p(D|w)/p(D): represents the support D provides for w.</li>
+</ul>
+<p>In the Bayesian (or epistemological) interpretation, probability measures <strong>a degree of belief</strong>.</p>
+<p>Conlusion on Bayes: </p>
+<ul>
+<li>Bayes theorem coincides with the cognition of people to the world. After one observes a result, he/she will improve his/her assumption.所以如何用一种迭代的方式，不断更新poster probability?</li>
+<li>Bayesian methods based on poor choices of prior can give poor results with high confidence. 如何选择prior distribution也是个问题</li>
+</ul>
+<h2>Problem:</h2>
+<h3>1.What is likelihood function?</h3>
+<p>In statistics, a likelihood function is a <strong>function of the parameters of a statistical model</strong>.<a href="https://en.wikipedia.org/wiki/Likelihood_function">wikipedia</a>
+The likelihood of a set of parameter values, w, given outcomes D, is equal to the probability of those observed outcomes given those parameter values</p>
+<p>In statistics, a likelihood function (often simply the likelihood) is a <strong>function of the parameters of a statistical model</strong>.
+We should understand the difference between <strong>likelihood</strong> and <strong>probability</strong></p>
+<ul>
+<li>Probability is used when describing <em>a function of the outcome given a fixed parameter value</em>. For example, if a coin is flipped 10 times and it is a fair coin, what is the probability of it landing heads-up every time? </li>
+<li>Likelihood is used when describing <em>a function of a parameter given an outcome</em>. For example, if a coin is flipped 10 times and it has landed heads-up 10 times, what is the likelihood that the coin is fair?</li>
+</ul>
+<h3>2.Why we should maximum likelihood function?</h3>
+<p><em>Maximum-likelihood estimation</em> is a method of estimating the parameters of a statistical model.</p>
+<p>In general, for </p>
+<ul>
+<li>a fixed set of data and </li>
+<li>underlying statistical model</li>
+</ul>
+<p>the method of maximum likelihood selects the set of values of the model parameters that maximizes the likelihood function
+Intuitively, this maximizes the "agreement" of the selected model with the observed data</p>
+<p>本质上，这里的maximize the aggreement和传统方法的minimize error 是同样的意思。而且对于可能的overfit都有相应的处理方式:</p>
+<ul>
+<li>对于minimize error : 添加一个惩罚变量$\lambda$, 对于越高次放的项（比如x的5次方以上）惩罚的越大。</li>
+<li>对于maximize likelihood本身，没有对overfit进行处理。因为likelihood只是bayes theorem其中一部分，但是对于bayes theorem整体，还有一个p(w)的先验概率,通常越负责的，次数越高的，p(w)越低。这里的p(w)和minimize里面的惩罚变量是相同的作用</li>
+</ul>
+<p>根据PRML公式1.43 
+<strong>p(w|D)=p(D|w)p(w)/p(D)</strong>, 
+如果我们选择maximum likelihood function p(D|w),那么像1.25节(P30)所说的，
+相当于最大化了后验概率p(w|D),通过公式推导 Formula 1.67: 其实在线性拟合上 <strong>Maximizing likelihood function</strong>和<strong>sum-of-squares</strong>
+是异曲同工之举。 也可以参见： http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/ 第4.5节——— 最大似然与最小二乘。其中最精华的部分我想是反向思维:
+<em> 正向思维是如何构建一条直线拟合这些点
+</em> Bayes方法是反向的，假设存在这一条直线，通过这条直线生成这些点的概率</p>
+<h3>3.limitations of the maximum likelihood approach</h3>
+<p><strong>Suppose:</strong> the observations are drawn independently from a Gaussian distribution whose <strong>mean μ and variance σ 2 are unknown</strong>, and we would like to determine these parameters from the data set.</p>
+<p>we can therefore write the probability of the data set, given μ and σ^2 ,
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?p%28x%7C%5Cmu%2C%5Csigma%5E2%29%20%3D%20%5Cprod_%7Bn%3D1%7D%5E%7BN%7DN%28x_n%7C%5Cmu%2C%5Csigma%5E2%29></img>
+</p></p>
+<p>log likelihood:
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?ln%5Crho%20%28x%7C%5Cmu%2C%5Csigma%5E2%29%20%3D%20-%5Cfrac%7B1%7D%7B2%5Csigma%5E2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%28x_n-%5Cmu%29%5E2-%5Cfrac%7BN%7D%7B2%7Dln%5Csigma%5E2-%5Cfrac%7BN%7D%7B2%7Dln%282%5Cpi%29></img>
+</p>
+Maximizing  with respect to μ, 
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?%5Cmu_%7BML%7D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7Dx_n></img>
+</p>
+maximizing with respect to σ^2
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?%5Csigma_%7BML%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%28x_n%20-%20%5Cmu_%7BML%7D%29%5E2></img>
+</p>
+We can see that: </p>
+<ul>
+<li>on average the maximum likelihood estimate will obtain the correct mean </li>
+<li>but will <strong>underestimate the true variance by a factor (N − 1)/N</strong>. <strong>How to get this ?????</strong></li>
+</ul>
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?E%5B%5Cmu_%7BML%7D%5D%20%3D%20%5Cmu></img>
+</p>
+
+<p align=center>
+<img src=http://latex.codecogs.com/svg.latex?E%5B%5Csigma_%7BML%7D%5E2%5D%20%3D%20%28%5Cfrac%7BN-1%7D%7BN%7D%29%5Csigma%5E2
+></img>
+</p>
+
+<h3>4.How to make full use of the precious training data?</h3>
+<p>Please list some methods: 
+- 1) Cross-validation
+- 2) Leave-one-out technique
+- 3) Various "information criteria" method</p>
+<ol>
+<li>Cross-validation</li>
+<li>Leave-one-out technique</li>
+<li>Various "information criteria" method</li>
+</ol>
+<h3>5.How to select optimal value(minimizing the misclassification rage)?</h3>
+<p>CH1.5.1 (P39-40): When minimizing the misclassification rate, we should assign each value of x to the class having
+the higher posterior probability p(C_k|x), how should we decision the value of x? 
+<p align=center>
+<!--p(mistake) = p(x\\in R_1,C_2)+p(x\\in R_2,C_1) = \\int_{R_1}p(x,C_2)dx + \\int_{R_2}p(x,C_1)dx-->
+<img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx></img>
+</p>
+<strong>Answer</strong> : I think this is not an issue. Because this is a decision problem in which p(x) is known. </p>
+<p>In Figure 1.24(shown as below), it is said the optimal value is where the curves for p(x, C_1) and p(x, C_2) cross. Why?
+<p align=center>
+<img src=https://github.com/AmosZ/Note-on-Machine-Learning/blob/master/img/Decision_Theory.png?raw=true></img>
+</p>
+We know that our target is to minimize :
+<p align=center>
+<!--p(mistake) = p(x\\in R_1,C_2)+p(x\\in R_2,C_1) = \\int_{R_1}p(x,C_2)dx + \\int_{R_2}p(x,C_1)dx-->
+<img src=http://latex.codecogs.com/svg.latex?p%28mistake%29%20%3D%20p%28x%5Cin%20R_1%2CC_2%29&plus;p%28x%5Cin%20R_2%2CC_1%29%20%3D%20%5Cint_%7BR_1%7Dp%28x%2CC_2%29dx%20&plus;%20%5Cint_%7BR_2%7Dp%28x%2CC_1%29dx></img>
+</p>
+So we should assign arrange that each x is assigned to whichever class has the smaller value of the integrand in this formular.In other word, if p(x, C1 ) &gt; p(x, C2 ) for a given value of x, then we should assign that x to class C1. When x^ is equal to x0:</p>
+<ul>
+<li>if x in R1, p(x,C1) &gt; p(x,C2),</li>
+<li>if x in R2, p(x,C2) &gt; p(x,C1).</li>
+</ul>
+<p>So optimal value is where the curves for p(x, C_1) and p(x, C_2) cross</p>
+<h3>(P1.10) CH1.5.4 (P45) Compensating for class priors: Do not understand the</h3>
+<p>last half part...?</p>
+<h1>3.Minimizing an error function and Bayesian approach in curve fitting</h1>
+<hr />
+<p>Fit the data using a <strong>polynomial function</strong> of the form:
+<p align=center>
+<!-- y(x,\\mathbf{w}) = w_0 + w_1x + w_{2}x^2 + ... + w_{m}x^M = \\sum_{j=0}^{M}w_{j}x^j -->
+<img src=http://latex.codecogs.com/svg.latex?y%28x%2C%5Cmathbf%7Bw%7D%29%20%3D%20w_0%20&plus;%20w_1x%20&plus;%20w_%7B2%7Dx%5E2%20&plus;%20...%20&plus;%20w_%7Bm%7Dx%5EM%20%3D%20%5Csum_%7Bj%3D0%7D%5E%7BM%7Dw_%7Bj%7Dx%5Ej></img>
+</p></p>
+<p>For data point x_n and target value t_n, error function is :
+<!-- E(\\textbf{w}) = \\frac{1}{2}\\sum_{n=1}^{N}\{y(x_n,\\textbf{w}) - t_n\}^2 -->
+<p align=center>
+<img src= http://latex.codecogs.com/svg.latex?E%28%5Ctextbf%7Bw%7D%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bn%3D1%7D%5E%7BN%7D%5C%7By%28x_n%2C%5Ctextbf%7Bw%7D%29%20-%20t_n%5C%7D%5E2></img>
+</p></p>
+<p>Then we need a regulator to prevent overfit:
+$$
+    \widetilde{E}(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}{y(x_n,\textbf{w}) - t_n}^2 + \frac{\lambda}{2}||w||^2
+$$
+where : 
+$||w||^2 = \mathbf{w}^T\mathbf{w} = w_0^2 + w_1^2 + ... + w_M^2$</p>
+<!--Reference-->
+	<div style="font-size:0.85em">
+	Published In <a href="/category/Pattern Recognition and Machine Learning.html">Pattern Recognition and Machine Learning</a><br>
+	</div>
+        </div><!-- /.entry-content -->
+
+</article>
+</section>
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+</body>
+</html>
